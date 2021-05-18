@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types'
 import Button from './Button' 
-import Task from './components/Task'
 const Header = ({title}) => {
     return (
         <header className ='header'>
