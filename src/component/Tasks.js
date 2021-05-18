@@ -13,4 +13,4 @@ export const Tasks = ({tasks}) => {
         </>
     )
 }
-export default Task
+export default Tasks
