@@ -2,10 +2,10 @@ import React from 'react'
 import Header from './component/Header'
 import {useState} from 'react'
 
-import Tasks from './component/Tasks'
-import Task from './component/Task'
+import Task from './component/Tasks'
 
-const App=() => { const [tasks, setTask] = useState( [
+
+const App=() => { const [tasks, setTasks] = useState( [
   {
       id: 1,
       text: "Doctors Appointement",
@@ -26,10 +26,13 @@ const App=() => { const [tasks, setTask] = useState( [
   }
 ])
 
+// Delete task 
+const deleteTask =(id)=>{
+setTasks(tasks.filter((task)=>task.id !==id ))}
   return (
     <div className="container">
     <Header title ="Tracker App" />     
-    <Task tasks ={tasks} />
+    <Task tasks ={tasks}  onDelete={deleteTask}/>
 
 
     </div>
