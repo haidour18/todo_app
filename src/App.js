@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from './component/Header'
 import {useState} from 'react'
+import Tasks from './components/Tasks'
 
 import Task from './component/Tasks'
 const App=() => { const [tasks, setTask] = useState( [
