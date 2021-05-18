@@ -2,7 +2,7 @@ import React from 'react'
 import Header from './component/Header'
 import {useState} from 'react'
 
-import Task from './component/Task'
+import Task from './component/Tasks'
 const App=() => { const [tasks, setTask] = useState( [
   {
       id: 1,
