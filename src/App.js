@@ -1,8 +1,9 @@
 import React from 'react'
 import Header from './component/Header'
 import {useState} from 'react'
-
 import Task from './component/Tasks'
+
+import Tasks from './component/Tasks'
 
 
 const App=() => { const [tasks, setTasks] = useState( [
@@ -25,16 +26,16 @@ const App=() => { const [tasks, setTasks] = useState( [
       reminder: false,
   }
 ])
+  const deleteTask = (id) => {
+  setTasks(tasks.filter((task) => task.id !== id ))}
 
-// Delete task 
-const deleteTask =(id)=>{
-setTasks(tasks.filter((task)=>task.id !==id ))}
+
   return (
     <div className="container">
     <Header title ="Tracker App" />     
-    <Task tasks ={tasks}  onDelete={deleteTask}/>
+    {tasks.length >0 ? <Tasks tasks ={tasks}  onDelete={deleteTask}/>
 
-
+ :'No Tasks to show' }
     </div>
   );
 }

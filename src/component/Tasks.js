@@ -1,13 +1,13 @@
 import Task from './Task'
 
 
-export const Tasks = ({tasks},onDelete) => {
+export const Tasks = (props) => {
    
     return (
         <>
-            {tasks.map((task) => (
+            {props.tasks.map((task) => (
             <Task key = {task.id} 
-              task ={task} onDelete ={onDelete} />
+              task ={task} onDelete ={props.onDelete} />
             ))}
         </>
     )
